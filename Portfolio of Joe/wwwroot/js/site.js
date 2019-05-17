@@ -5,3 +5,6 @@
 var element = document.getElementById("div1");
 element.classList.add("otherclass");
 element.classList.remove("otherclass");
+var element = document.getElementById("div1");
+element.classList.add("otherclass");
+element.classList.remove("otherclass");
