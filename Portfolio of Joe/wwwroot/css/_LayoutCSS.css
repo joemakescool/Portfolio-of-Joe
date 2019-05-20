@@ -1,0 +1,277 @@
+﻿/*
+    FONTS
+*/
+@font-face {
+    font-family: 'karla-bold';
+    src: url('../lib/fonts/karla/karla-bold.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'karla-bolditalic';
+    src: url('../lib/fonts/karla/karla-bolditalic.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'karla-italic';
+    src: url('../lib/fonts/karla/karla-italic.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'karla-regular';
+    src: url('../lib/fonts/karla/karla-regular.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'montserrat-italic';
+    src: url('../lib/fonts/montserrat/montserrat-italic.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'montserrat-light';
+    src: url('../lib/fonts/montserrat/montserrat-light.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'montserrat-regular';
+    src: url('../lib/fonts/montserrat/montserrat-regular.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'montserrat-semibold';
+    src: url('../lib/fonts/montserrat/montserrat-semibold.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'montserrat-medium';
+    src: url('../lib/fonts/montserrat/montserrat-medium.ttf') format('truetype');
+}
+
+/* Main Body */
+body {
+    background-image: linear-gradient(to right, rgba(211, 211, 211, .5), rgba(158, 54, 58, 1) );
+}
+
+p {
+    font-family: karla-regular;
+}
+
+.footer {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    white-space: nowrap;
+    /* Set the fixed height of the footer here */
+    height: 60px;
+    line-height: 60px; /* Vertically center the text there */
+}
+
+.footer_image {
+    width: 5em;
+    display: flex;
+    margin: 5px;
+}
+
+.my-content{
+    margin: 30px;
+}
+
+/* COLORS */
+:root {
+    --ebony: #26353E;
+    --shuttle-gray: #555C64;
+    --matrix: #af5e4d;
+    --gray: #C0AEA4;
+    --Blue-Popsicle: #0f2862; /*(15,40,98)*/
+    --Redline: #9e363a; /*(158,54,58)*/
+    --Purple-Shadow: #091f36; /*(9,31,54)*/
+    --Grey-Blue-Leaf: #4f5f76; /*(79,95,118)*/
+    --white: #e9e9e9; /*(211,211,211) */
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+
+
+/* NAVBAR */
+header {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    padding: 20px;
+    margin: 30px;
+    margin-bottom: 0px;
+    border-bottom-right-radius: 25px;
+    border-top-left-radius: 25px;
+    background-color: rgba(255, 255, 255, .3);
+    box-shadow: 0 .25rem .75rem rgba(0, 0, 0, .05);
+}
+
+li, a, button {
+    font-family: montserrat-medium;
+    font-size: 1.1em;
+    color: var(--Purple-Shadow);
+    opacity: .95;
+    text-decoration: none;
+}
+
+.logo {
+    margin-right: auto;
+    cursor: pointer;
+    font-family: montserrat-semibold;
+    font-size: 1.5em;
+    color: var(--Purple-Shadow);
+    opacity: 1;
+    transition: all;
+    transition-duration: 300ms;
+    transition-timing-function: ease-in-out;
+}
+
+    .logo:hover {
+        background-color: var(--Blue-Popsicle);
+        border-color: var(--Blue-Popsicle);
+        border-radius: 10px;
+        opacity: 1;
+        text-decoration: none;
+        color: var(--white);
+    }
+
+.logo2 {
+    font-family: montserrat-medium;
+    color: var(--Purple-Shadow);
+    opacity: .9;
+}
+
+
+.nav__links {
+    list-style: none;
+    cursor: pointer;
+}
+
+    .nav__links li a {
+        padding: 0px 20px;
+    }
+
+    .nav__links li {
+        display: inline-block;
+        transition: all;
+        transition-duration: 300ms;
+        transition-timing-function: ease-in-out;
+    }
+
+ul, p, li {
+    margin: 0px;
+    padding: 0px;
+}
+
+.nav__links li a {
+    transition: all;
+    transition-duration: 300ms;
+    transition-timing-function: ease-in-out;
+}
+
+.margin-right {
+    margin-right: 10px;
+}
+
+.my-dropdown {
+    padding: 0px 20px;
+    transition: all;
+    transition-duration: 300ms;
+    transition-timing-function: ease-in-out;
+}
+
+    .my-dropdown:hover {
+    }
+
+
+.nav__links li:hover {
+    color: var(--white);
+    background-color: var(--Blue-Popsicle);
+    border-color: var(--Blue-Popsicle);
+    border-radius: 10px;
+    opacity: 1;
+}
+
+.nav__links li a:hover {
+    color: var(--white);
+    text-decoration: none;
+    opacity: 1;
+}
+
+/* BUTTONS */
+button {
+    font-family: montserrat-medium;
+    color: var(--Purple-Shadow);
+    border: none;
+    background-color: none;
+}
+
+
+.bar {
+    width: 100%;
+    height: 50px;
+    border: solid;
+    background: radial-gradient(circle at top left, #091f36, #9e363a);
+}
+
+
+.image {
+    width: 50%;
+    height: 100px;
+    background: linear-gradient(to right, rgba(9,31,54, .5), rgba(158,54,58, .7)), url('../lib/images/_layout/white-marble-1-2018.jpg');
+}
+
+
+
+
+
+
+
+
+
+/* Main Body */
+
+.wrapper {
+}
+
+.my-content {
+}
+
+.layout-footer {
+}
+
+.inside-footer {
+}
+
+
+
+
+
+
+.ebony {
+    width: 200px;
+    height: 200px;
+    background-color: var(--Blue-Popsicle);
+}
+
+.shuttle-gray {
+    width: 200px;
+    height: 200px;
+    background-color: var(--Redline);
+}
+
+.matrix {
+    width: 200px;
+    height: 200px;
+    background-color: var(--Purple-Shadow);
+}
+
+.gray {
+    width: 200px;
+    height: 200px;
+    background-color: var(--Grey-Blue-Leaf);
+}
