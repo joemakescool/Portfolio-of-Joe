@@ -22,17 +22,16 @@
     <link rel="stylesheet" href="~/css/site.css" />
 </head>
 <body>
-    <div class="wrapper">
+    
         <header class="my-header">
             <a href="#" class="logo"><i class="fab fa-html5 fa-lg"></i> Joe's Portfolio</a>
 
             <nav>
                 <ul class="nav__links">
-                    <li><a href="#">Contact</a></li>
-                    <li><a href="#">Home</a></li>
-                    <li><a href="#">About</a></li>
-                    <li><a href="#">Help</a></li>
-                    <li><a href="#">Services</a></li>
+                    <li><a asp-controller="Home" asp-action="Index">Home</a></li>
+                    <li><a asp-controller="Home" asp-action="Contact">Contact</a></li>
+                    <li><a asp-controller="Home" asp-action="About">About</a></li>
+                    <li><a href="#">Resume</a></li>
                     <!-- Dropdown -->
                     <li class="dropdown my-dropdown margin-right">
                         <div class=" dropdown-toggle" id="navbarDropdownMenuLink" data-toggle="dropdown"
@@ -48,24 +47,24 @@
             <div href="#" class="logo2"><i class="fab fa-html5 fa-lg"></i> <i class="fab fa-css3"></i> <i class="fab fa-js-square"></i></div>
 
         </header>
-
         <div class="my-content">
+
             <partial name="_CookieConsentPartial" />
             <main role="main" class="pb-3">
 
                 @RenderBody()
 
             </main>
-
         </div>
+       
 
         <footer class="border-top footer text-muted layout-footer">
             <div class="container-fluid inside-footer">
                 &copy; 2019 - Portfolio of Joe - <a asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
-                <img src="~/lib/images/weber state/WeberBuffalo.jpg" style="float:right" class="footer_image" />
+                <img src="~/lib/images/weber state/WeberBuffalo.jpg" style="float:right" class="footer_image img-thumbnail" />
             </div>
         </footer>
-    </div>
+    
 
 
     <environment include="Development">

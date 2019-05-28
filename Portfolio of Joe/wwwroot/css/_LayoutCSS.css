@@ -48,7 +48,7 @@
 
 /* Main Body */
 body {
-    background-image: linear-gradient(to right, rgba(211, 211, 211, .5), rgba(158, 54, 58, 1) );
+    background-image: linear-gradient(to right, rgba(79,95,118, .7), rgba(158, 54, 58, .9) ), url('../lib/images/weber state/weber state university_200px.png');
 }
 
 p {
@@ -71,8 +71,10 @@ p {
     margin: 5px;
 }
 
-.my-content{
-    margin: 30px;
+.my-content {
+    margin-top: 30px;
+    margin-left: 30px;
+    margin-right: 0px;
 }
 
 /* COLORS */
@@ -103,10 +105,10 @@ header {
     align-items: center;
     padding: 20px;
     margin: 30px;
-    margin-bottom: 0px;
+    margin-bottom: 60px;
     border-bottom-right-radius: 25px;
     border-top-left-radius: 25px;
-    background-color: rgba(255, 255, 255, .3);
+    background-color: rgba(200, 200, 200, .4);
     box-shadow: 0 .25rem .75rem rgba(0, 0, 0, .05);
 }
 
@@ -149,10 +151,15 @@ li, a, button {
 .nav__links {
     list-style: none;
     cursor: pointer;
+    height: 100%;
+    
 }
 
     .nav__links li a {
-        padding: 0px 20px;
+        padding: 20px;
+        transition: all;
+        transition-duration: 300ms;
+        transition-timing-function: ease-in-out;
     }
 
     .nav__links li {
@@ -162,7 +169,22 @@ li, a, button {
         transition-timing-function: ease-in-out;
     }
 
-ul, p, li {
+        .nav__links li:hover {
+            color: var(--white);
+            background-color: var(--Blue-Popsicle);
+            border-color: var(--Blue-Popsicle);
+            border-bottom-right-radius: 15px;
+            border-top-left-radius: 15px;
+            opacity: 1;
+        }
+
+        .nav__links li a:hover {
+            color: var(--white);
+            text-decoration: none;
+            opacity: 1;
+        }
+
+ul, p, li, a {
     margin: 0px;
     padding: 0px;
 }
@@ -188,27 +210,15 @@ ul, p, li {
     }
 
 
-.nav__links li:hover {
-    color: var(--white);
-    background-color: var(--Blue-Popsicle);
-    border-color: var(--Blue-Popsicle);
-    border-radius: 10px;
-    opacity: 1;
-}
 
-.nav__links li a:hover {
-    color: var(--white);
-    text-decoration: none;
-    opacity: 1;
-}
 
 /* BUTTONS */
-button {
-    font-family: montserrat-medium;
-    color: var(--Purple-Shadow);
-    border: none;
-    background-color: none;
+button.btn {
+    font-family: montserrat-regular;
+    background-color: var(--Blue-Popsicle);
+    border-color: var(--Blue-Popsicle);
 }
+
 
 
 .bar {
@@ -224,33 +234,6 @@ button {
     height: 100px;
     background: linear-gradient(to right, rgba(9,31,54, .5), rgba(158,54,58, .7)), url('../lib/images/_layout/white-marble-1-2018.jpg');
 }
-
-
-
-
-
-
-
-
-
-/* Main Body */
-
-.wrapper {
-}
-
-.my-content {
-}
-
-.layout-footer {
-}
-
-.inside-footer {
-}
-
-
-
-
-
 
 .ebony {
     width: 200px;
@@ -274,4 +257,139 @@ button {
     width: 200px;
     height: 200px;
     background-color: var(--Grey-Blue-Leaf);
+}
+
+/*
+    Index.cshtml
+*/
+.heading {
+    font-family: montserrat-regular;
+    color: var(--Purple-Shadow);
+}
+
+.subheading {
+    font-family: karla-regular;
+    color: var(--Purple-Shadow);
+}
+
+.inside-index{
+    min-height: 100px;
+    min-width: 100px;
+}
+
+.index {
+    display: flex;
+    flex-direction: column;
+    height: auto;
+    padding: 10px;
+    width: 100%;
+    border-left: solid;
+    border-bottom: solid;
+    border-color: var(--Blue-Popsicle);
+}
+
+
+.order-links li {
+    display: inline-block;
+    text-decoration: none;
+    padding: 5px;
+    padding-left: 0px;
+    color: var(--Purple-Shadow);
+    opacity: 1;
+}
+
+    .order-links li a {
+        display: inline-block;
+        text-decoration-style: none;
+        text-decoration: none;
+        transition: all;
+        transition-duration: 300ms;
+        transition-timing-function: ease-in-out;
+    }
+
+    .order-links li:hover {
+        color: var(--Redline);
+    }
+
+.order-links a:hover {
+    color: var(--white);
+}
+
+/* Main Layout for each page for the grids */
+
+.my-active {
+    height: 100%;
+    background-color: rgba(158,54,58, 1);
+    color: var(--white);
+    border-bottom: solid;
+    border-width: 5px;
+    border-color: var(--Blue-Popsicle);
+    border-bottom-right-radius: 25px;
+    border-top-left-radius: 25px;
+    transition: all;
+    transition-duration: 300ms;
+    transition-timing-function: ease-in-out;
+}
+
+.left-column li {
+    display: inline-block;
+    text-decoration: none;
+    color: var(--Purple-Shadow);
+    padding: 5px;
+    padding-left: 0px;
+    opacity: 1;
+}
+
+    .left-column li a {
+        display: inline-block;
+        text-decoration-style: none;
+        text-decoration: none;
+        transition: all;
+        transition-duration: 300ms;
+        transition-timing-function: ease-in-out;
+    }
+
+    .left-column li:hover {
+        color: var(--Redline);
+    }
+
+.left-column a:hover {
+    color: var(--white);
+}
+
+.left-column {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    padding: 20px;
+    border-left: solid;
+    border-bottom: solid;
+    border-color: var(--Blue-Popsicle);
+}
+
+
+.middle-column li {
+    padding: 5px;
+    text-decoration: wavy;
+    list-style-type: georgian;
+    margin-left: 5px;
+    margin-right: 5px;
+}
+
+
+.middle-column {
+    height: auto;
+    border-top: solid;
+    padding: 20px;
+    
+    border-color: var(--Blue-Popsicle);
+}
+
+
+
+.right-column {
+    padding-top: 20px;
+    border-right: solid;
+    border-bottom: solid;
+    border-color: var(--Blue-Popsicle);
 }
