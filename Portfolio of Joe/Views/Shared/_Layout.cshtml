@@ -1,4 +1,10 @@
-﻿<!DOCTYPE html>
+﻿@{
+
+    var Resume ="~ / lib /Downloads / Resume.pdf";
+
+}
+
+<!DOCTYPE html>
 <html>
 <head>
     <meta charset="utf-8" />
@@ -22,16 +28,19 @@
     <link rel="stylesheet" href="~/css/site.css" />
 </head>
 <body>
-    
+    <div class="wrapper">
         <header class="my-header">
-            <a href="#" class="logo"><i class="fab fa-html5 fa-lg"></i> Joe's Portfolio</a>
+            <a href ="# "class="logo"><i class="fab fa-html5 fa-lg"></i> Joe's Portfolio</a>
 
             <nav>
                 <ul class="nav__links">
                     <li><a asp-controller="Home" asp-action="Index">Home</a></li>
                     <li><a asp-controller="Home" asp-action="Contact">Contact</a></li>
                     <li><a asp-controller="Home" asp-action="About">About</a></li>
-                    <li><a href="#">Resume</a></li>
+                    <li>
+                        <a href="~/lib/Downloads/Resume.pdf" download>RESUME</a>
+
+                    </li>
                     <!-- Dropdown -->
                     <li class="dropdown my-dropdown margin-right">
                         <div class=" dropdown-toggle" id="navbarDropdownMenuLink" data-toggle="dropdown"
@@ -56,37 +65,37 @@
 
             </main>
         </div>
-       
+
 
         <footer class="border-top footer text-muted layout-footer">
-            <div class="container-fluid inside-footer">
+            <div class="container-fluid inside-footer subheading">
                 &copy; 2019 - Portfolio of Joe - <a asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
                 <img src="~/lib/images/weber state/WeberBuffalo.jpg" style="float:right" class="footer_image img-thumbnail" />
             </div>
         </footer>
-    
 
 
-    <environment include="Development">
-        <script src="~/lib/jquery/dist/jquery.js"></script>
-        <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.js"></script>
-    </environment>
-    <environment exclude="Development">
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"
-                asp-fallback-src="~/lib/jquery/dist/jquery.min.js"
-                asp-fallback-test="window.jQuery"
-                crossorigin="anonymous"
-                integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=">
-        </script>
-        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.bundle.min.js"
-                asp-fallback-src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"
-                asp-fallback-test="window.jQuery && window.jQuery.fn && window.jQuery.fn.modal"
-                crossorigin="anonymous"
-                integrity="sha384-xrRywqdh3PHs8keKZN+8zzc5TX0GRTLCcmivcbNJWm2rs5C8PRhcEn3czEjhAO9o">
-        </script>
-    </environment>
-    <script src="~/js/site.js" asp-append-version="true"></script>
 
+        <environment include="Development">
+            <script src="~/lib/jquery/dist/jquery.js"></script>
+            <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.js"></script>
+        </environment>
+        <environment exclude="Development">
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"
+                    asp-fallback-src="~/lib/jquery/dist/jquery.min.js"
+                    asp-fallback-test="window.jQuery"
+                    crossorigin="anonymous"
+                    integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=">
+            </script>
+            <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.bundle.min.js"
+                    asp-fallback-src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"
+                    asp-fallback-test="window.jQuery && window.jQuery.fn && window.jQuery.fn.modal"
+                    crossorigin="anonymous"
+                    integrity="sha384-xrRywqdh3PHs8keKZN+8zzc5TX0GRTLCcmivcbNJWm2rs5C8PRhcEn3czEjhAO9o">
+            </script>
+        </environment>
+        <script src="~/js/site.js" asp-append-version="true"></script>
+    </div>
     @RenderSection("Scripts", required: false)
 </body>
 </html>
