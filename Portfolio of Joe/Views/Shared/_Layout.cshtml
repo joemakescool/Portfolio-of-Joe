@@ -1,6 +1,6 @@
 ﻿@{
 
-    var Resume ="~ / lib /Downloads / Resume.pdf";
+    var Resume ="/lib/Downloads/Resume.pdf";
 
 }
 
@@ -28,9 +28,10 @@
     <link rel="stylesheet" href="~/css/site.css" />
 </head>
 <body>
+
     <div class="wrapper">
         <header class="my-header">
-            <a href ="# "class="logo"><i class="fab fa-html5 fa-lg"></i> Joe's Portfolio</a>
+            <a href="# " class="logo"><i class="fab fa-html5 fa-lg"></i> Joe's Portfolio</a>
 
             <nav>
                 <ul class="nav__links">
@@ -38,7 +39,7 @@
                     <li><a asp-controller="Home" asp-action="Contact">Contact</a></li>
                     <li><a asp-controller="Home" asp-action="About">About</a></li>
                     <li>
-                        <a href="~/lib/Downloads/Resume.pdf" download>RESUME</a>
+                        <a href=@Resume download>RESUME</a>
 
                     </li>
                     <!-- Dropdown -->
